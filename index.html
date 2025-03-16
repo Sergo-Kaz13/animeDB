@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./main.js" defer></script>
+    <title>Anime DB</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="headerBlock">
+          <div class="logo">
+            <a href="/"
+              ><img src="./assets/img/logo.png" alt="logo" /><span
+                class="logoText"
+                >anime</span
+              ></a
+            >
+          </div>
+          <div class="filter">
+            <img src="./assets/img/settingsfilter_121137.png" alt="" />
+          </div>
+        </div>
+
+        <form class="formSearch" action="#" id="formSearch">
+          <input
+            class="search"
+            type="search"
+            name="search"
+            id="search"
+            autocomplete="off"
+          />
+          <button class="btnSearch" type="submit">🔎</button>
+        </form>
+      </header>
+
+      <main class="main">
+        <div class="mainContent"></div>
+        <button class="btnShowMore">show more...</button>
+      </main>
+    </div>
+  </body>
+</html>

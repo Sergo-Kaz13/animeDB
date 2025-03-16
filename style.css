@@ -1,0 +1,166 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  outline: none;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 1rem;
+  background-color: #2d71ae;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0.8rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.headerBlock {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 2rem;
+}
+
+.logo a {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.logoText {
+  align-self: flex-end;
+}
+
+.filter {
+  width: 2rem;
+  height: 2rem;
+}
+
+.formSearch {
+  width: 100%;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: space-between;
+}
+
+.search {
+  align-content: baseline;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.search:focus {
+  box-shadow: 0.2rem 0.2rem 0.8rem aquamarine;
+}
+
+.btnSearch {
+  width: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: aquamarine;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnSearch:hover {
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mainContent {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1rem;
+}
+
+.blockAnimeItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: azure;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.animeImg {
+  width: 100%;
+}
+
+.animeInfoBlock {
+  padding: 0.4rem;
+}
+
+.animeTitle {
+  font-weight: 500;
+}
+
+.animeRanking,
+.animeEpisodes {
+  font-size: 0.7rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.btnShowMore {
+  align-self: center;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0.7rem;
+  color: rgb(234, 236, 236);
+  background-color: rgb(14, 190, 43);
+  border: none;
+  border-radius: 0.5rem;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnShowMore:hover {
+  cursor: pointer;
+}
