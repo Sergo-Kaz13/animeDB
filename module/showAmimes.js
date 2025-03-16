@@ -1,11 +1,11 @@
 function showAmimes(animes) {
-  const { data, meta } = animes;
-  // const {_id, title, image, episodes, ranking} = data;
-
+  const { data } = animes;
   const mainContent = document.querySelector(".mainContent");
 
-  data.map(({ _id, title, image, episodes, ranking }) => {
-    const blockAnimeItem = document.createElement("div");
+  data.map(({ _id, title, image, episodes, ranking, link }) => {
+    const blockAnimeItem = document.createElement("a");
+    blockAnimeItem.setAttribute("href", link);
+    blockAnimeItem.setAttribute("target", "_black");
     blockAnimeItem.classList.add("blockAnimeItem");
     blockAnimeItem.id = _id;
 
@@ -36,8 +36,6 @@ function showAmimes(animes) {
 
     mainContent.appendChild(blockAnimeItem);
   });
-
-  console.log(["animeItems"], animeItems);
 }
 
 export default showAmimes;
