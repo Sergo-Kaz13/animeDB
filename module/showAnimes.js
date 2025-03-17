@@ -1,4 +1,8 @@
-function showAmimes(animes) {
+function showAnimes(animes) {
+  console.log(["animes"], animes);
+
+  // animes.then((anime) => console.log(["anime"], anime));
+
   const { data } = animes;
   const mainContent = document.querySelector(".mainContent");
 
@@ -38,4 +42,4 @@ function showAmimes(animes) {
   });
 }
 
-export default showAmimes;
+export default showAnimes;
