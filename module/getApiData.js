@@ -1,4 +1,4 @@
-const getApiData = async () => {
+const getApiData = async (url) => {
   const options = {
     method: "GET",
     headers: {
@@ -7,20 +7,17 @@ const getApiData = async () => {
     },
   };
 
+  // try {
+  //   const response = await fetch(url, options);
+  //   const result = await response.json();
+  //   console.log(result);
+  //   return result;
+  // } catch (error) {
+  //   console.error(error);
+  // }
+
   const response = await fetch("./data.json");
   return await response.json();
 };
-// const url =
-//   "https://anime-db.p.rapidapi.com/anime?page=1&size=10&search=Fullmetal&genres=Fantasy%2CDrama&sortBy=ranking&sortOrder=asc";
-
-// try {
-//   const response = await fetch(url, options);
-//   const result = await response.json();
-//   console.log(result);
-// } catch (error) {
-//   console.error(error);
-// }
-
-// const response = await fetch(apiData(), options);
 
 export default getApiData;

@@ -1,6 +1,9 @@
 "use strict";
 
 import apiData from "./apiUrl.js";
+import getApiData from "./getApiData.js";
+import showAnimes from "./showAnimes.js";
+import resetAnimeWindow from "./resetAnimeWindow.js";
 
 function search(e) {
   e.preventDefault();
@@ -9,6 +12,9 @@ function search(e) {
   const value = Object.fromEntries(formData.entries());
 
   const url = apiData("&search=" + value.search.trim().replace(/ /g, "%20"));
+
+  resetAnimeWindow();
+  getApiData(url).then((anime) => showAnimes(anime));
 
   console.log(url);
   e.target.reset();

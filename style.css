@@ -71,8 +71,35 @@ body {
 }
 
 .filter {
+  position: relative;
   width: 2rem;
   height: 2rem;
+}
+
+.filterBtn {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+}
+
+.filterForm {
+  position: absolute;
+  z-index: 50;
+  top: -0.5rem;
+  right: -0.8rem;
+  width: 80vw;
+  padding: 15px;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-color: silver;
+  transition: all ease-in-out 0.28s;
+}
+
+.showFilter {
+  visibility: hidden;
 }
 
 .formSearch {
