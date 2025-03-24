@@ -177,9 +177,11 @@ body {
 
 .genresBlockBtn {
   text-align: right;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease-in 0.28s;
 }
 
 .genresBlockBtn::before {
@@ -187,6 +189,14 @@ body {
   display: inline-block;
   padding-right: 0.5rem;
   transition: all ease-in-out 0.28s;
+}
+
+.genresBlockBtn:hover {
+  opacity: 0.8;
+}
+
+.genresBlockBtn:hover::before {
+  padding-right: 1rem;
 }
 
 .genresSelectBlock {
@@ -208,6 +218,7 @@ body {
 
 .rotateBtn.genresBlockBtn::before {
   transform: translate(0) rotate(-90deg);
+  padding-right: 1rem;
 }
 
 .formSearch {
