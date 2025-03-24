@@ -143,18 +143,32 @@ body {
 
 .filterFormSortBy,
 .filterFormSortOrder {
-  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
   font-weight: 500;
 }
 
 .filterFormSortBy div,
 .filterFormSortOrder div {
-  padding-left: 1rem;
+  align-self: baseline;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.5rem;
+  background-color: #fff;
+  color: #123a62;
+  transition: all ease-in 0.28s;
+}
+
+.filterFormSortBy div:hover,
+.filterFormSortOrder div:hover {
+  opacity: 0.8;
 }
 
 .filterForm h4 {
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -301,8 +315,8 @@ body {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 0.7rem;
-  color: rgb(234, 236, 236);
-  background-color: rgb(14, 190, 43);
+  color: #123a62;
+  background: #00ff96;
   border: none;
   border-radius: 0.5rem;
   transition: all ease-in-out 0.28s;
