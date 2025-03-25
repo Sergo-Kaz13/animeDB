@@ -10,8 +10,9 @@ function search(e) {
 
   const formData = new FormData(e.target);
   const value = Object.fromEntries(formData.entries());
+  const searchValue = "&search=" + value.search.trim().replace(/ /g, "%20");
 
-  const url = apiData("&search=" + value.search.trim().replace(/ /g, "%20"));
+  const url = apiData(searchValue);
 
   resetAnimeWindow();
   getApiData(url).then((anime) => showAnimes(anime));

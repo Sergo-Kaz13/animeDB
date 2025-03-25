@@ -1,4 +1,9 @@
 const getApiData = async (url) => {
+  if (!url) {
+    url =
+      "https://anime-db.p.rapidapi.com/anime?page=1&size=10&sortBy=ranking&sortOrder=asc";
+  }
+
   const options = {
     method: "GET",
     headers: {
@@ -7,17 +12,19 @@ const getApiData = async (url) => {
     },
   };
 
-  // try {
-  //   const response = await fetch(url, options);
-  //   const result = await response.json();
-  //   console.log(result);
-  //   return result;
-  // } catch (error) {
-  //   console.error(error);
-  // }
+  console.log(["url"], url);
 
-  const response = await fetch("./data.json");
-  return await response.json();
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+    return result;
+  } catch (error) {
+    console.error(error);
+  }
+
+  // const response = await fetch("./data.json");
+  // return await response.json();
 };
 
 export default getApiData;

@@ -210,6 +210,20 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.genresSelect label {
+  padding-left: 0.5rem;
+  cursor: pointer;
+  transition: all ease-in 0.28s;
+}
+
+.genresSelect label:hover {
+  opacity: 0.8;
+  padding-left: 0.6rem;
 }
 
 .genresSelectBlockShow {
